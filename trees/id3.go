@@ -373,9 +373,9 @@ func (d *DecisionTreeNode) Predict(what base.FixedDataGrid) (base.FixedDataGrid,
 				at := cur.SplitRule.SplitAttr
 				ats, err := what.GetAttribute(at)
 				if err != nil {
-					//predictions.Set(classAttrSpec, rowNo, classAttr.GetSysValFromString(cur.Class))
-					//break
-					panic(err)
+					predictions.Set(classAttrSpec, rowNo, classAttr.GetSysValFromString(cur.Class))
+					break
+					//panic(err)
 				}
 
 				var classVar string
