@@ -5,7 +5,7 @@ import "C"
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 	"io/ioutil"
 	"os"
 	"unsafe"

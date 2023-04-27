@@ -3,7 +3,7 @@ package knn
 import (
 	"testing"
 
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

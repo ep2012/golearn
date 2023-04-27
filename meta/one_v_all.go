@@ -2,7 +2,7 @@ package meta
 
 import (
 	"fmt"
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 )
 
 // OneVsAllModel replaces class Attributes with numeric versions
@@ -346,9 +346,7 @@ func (m *OneVsAllModel) generateAttributes(from base.FixedDataGrid) map[base.Att
 	return ret
 }
 
-//
 // Filter implementation
-//
 type oneVsAllFilter struct {
 	attrs        map[base.Attribute]base.Attribute
 	classAttr    base.Attribute

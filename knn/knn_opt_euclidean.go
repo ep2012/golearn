@@ -4,7 +4,7 @@ package knn
 import "C"
 
 import (
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 	"sort"
 	"unsafe"
 )

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 )
 
 // BinningFilter does equal-width binning for numeric

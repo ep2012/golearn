@@ -4,8 +4,8 @@ package clustering
 import (
 	"fmt"
 
-	"github.com/sjwhitworth/golearn/base"
-	"github.com/sjwhitworth/golearn/metrics/pairwise"
+	"github.com/ep2012/golearn/base"
+	"github.com/ep2012/golearn/metrics/pairwise"
 )
 
 // ClusterParameters takes a number of variables common to all clustering

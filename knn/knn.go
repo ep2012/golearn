@@ -7,11 +7,11 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/ep2012/golearn/base"
+	"github.com/ep2012/golearn/kdtree"
+	"github.com/ep2012/golearn/metrics/pairwise"
+	"github.com/ep2012/golearn/utilities"
 	"github.com/gonum/matrix"
-	"github.com/sjwhitworth/golearn/base"
-	"github.com/sjwhitworth/golearn/kdtree"
-	"github.com/sjwhitworth/golearn/metrics/pairwise"
-	"github.com/sjwhitworth/golearn/utilities"
 	"gonum.org/v1/gonum/mat"
 )
 

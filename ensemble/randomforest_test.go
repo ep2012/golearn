@@ -6,9 +6,9 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/sjwhitworth/golearn/base"
-	"github.com/sjwhitworth/golearn/evaluation"
-	"github.com/sjwhitworth/golearn/filters"
+	"github.com/ep2012/golearn/base"
+	"github.com/ep2012/golearn/evaluation"
+	"github.com/ep2012/golearn/filters"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

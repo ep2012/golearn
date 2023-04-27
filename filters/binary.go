@@ -2,7 +2,7 @@ package filters
 
 import (
 	"fmt"
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 )
 
 // BinaryConvertFilters convert a given DataGrid into one which
@@ -56,7 +56,7 @@ func (b *BinaryConvertFilter) String() string {
 // If the old Attribute has a categorical value of at most n-items, then a non-zero
 // or zero byte sequence is returned based on the value of the new Attribute passed in.
 //
-// If the old Attribute is a float, it's value's unpacked and we check for non-zeroness
+// # If the old Attribute is a float, it's value's unpacked and we check for non-zeroness
 //
 // If the old Attribute is a BinaryAttribute, just return the input
 func (b *BinaryConvertFilter) Transform(a base.Attribute, n base.Attribute, attrBytes []byte) []byte {

@@ -2,7 +2,7 @@ package meta
 
 import (
 	"fmt"
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 	"math/rand"
 	"runtime"
 	"strings"
@@ -222,13 +222,15 @@ func (b *BaggedModel) Load(filePath string) error {
 	return err
 }
 
-/* type BaggedModel struct {
-	base.BaseClassifier
-	Models             []base.Classifier
-	RandomFeatures     int
-	lock               sync.Mutex
-	selectedAttributes map[int][]base.Attribute, always RandomFeatures in length
-}*/
+/*
+	 type BaggedModel struct {
+		base.BaseClassifier
+		Models             []base.Classifier
+		RandomFeatures     int
+		lock               sync.Mutex
+		selectedAttributes map[int][]base.Attribute, always RandomFeatures in length
+	}
+*/
 func (b *BaggedModel) SaveWithPrefix(writer *base.ClassifierSerializer, prefix string) error {
 	b.lock.Lock()
 	defer b.lock.Unlock()

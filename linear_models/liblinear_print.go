@@ -1,3 +1,4 @@
+//go:build go1.2
 // +build go1.2
 
 package linear_models
@@ -11,7 +12,7 @@ void golearn_liblinear_print_func_cgo(char *);
 import "C"
 
 import (
-	"github.com/sjwhitworth/golearn/base"
+	"github.com/ep2012/golearn/base"
 	"unsafe"
 )
 

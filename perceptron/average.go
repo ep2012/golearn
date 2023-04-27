@@ -1,7 +1,7 @@
 package perceptron
 
 import (
-	base "github.com/sjwhitworth/golearn/base"
+	base "github.com/ep2012/golearn/base"
 	"math"
 )
 
