@@ -151,18 +151,6 @@ func (Attr *CategoricalAttribute) Equals(other Attribute) bool {
 		return false
 	}
 
-	// Check that this CategoricalAttribute has the same
-	// values as the other, in the same order
-	if len(attribute.values) != len(Attr.values) {
-		return false
-	}
-
-	for i, a := range Attr.values {
-		if a != attribute.values[i] {
-			return false
-		}
-	}
-
 	return true
 }
 
