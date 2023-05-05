@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"sort"
 
+	"github.com/adrg/strutil"
+	"github.com/adrg/strutil/metrics"
 	"github.com/ep2012/golearn/base"
 	"github.com/ep2012/golearn/evaluation"
 )
@@ -394,12 +396,13 @@ func (d *DecisionTreeNode) Predict(what base.FixedDataGrid) (base.FixedDataGrid,
 				if next, ok := cur.Children[classVar]; ok {
 					cur = next
 				} else {
-					// Suspicious of this
 					var bestChild string
+					var bestSimilarity float64 = 0
 					for c := range cur.Children {
-						bestChild = c
-						if c > classVar {
-							break
+						similarity := strutil.Similarity(classVar, c, metrics.NewHamming())
+
+						if similarity > bestSimilarity {
+							bestChild = c
 						}
 					}
 					cur = cur.Children[bestChild]

@@ -3,6 +3,7 @@ module github.com/ep2012/golearn
 go 1.15
 
 require (
+	github.com/adrg/strutil v0.3.0 // indirect
 	github.com/gonum/blas v0.0.0-20181208220705-f22b278b28ac
 	github.com/gonum/lapack v0.0.0-20181123203213-e4cdc5a0bff9 // indirect
 	github.com/gonum/matrix v0.0.0-20181209220409-c518dec07be9
