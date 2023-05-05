@@ -397,12 +397,13 @@ func (d *DecisionTreeNode) Predict(what base.FixedDataGrid) (base.FixedDataGrid,
 					cur = next
 				} else {
 					var bestChild string
-					var bestSimilarity float64 = 0
+					var bestSimilarity float64 = -1
 					for c := range cur.Children {
 						similarity := strutil.Similarity(classVar, c, metrics.NewHamming())
 
 						if similarity > bestSimilarity {
 							bestChild = c
+							bestSimilarity = similarity
 						}
 					}
 					cur = cur.Children[bestChild]
@@ -483,12 +484,14 @@ func (t *ID3DecisionTree) PredictProba(what base.FixedDataGrid) (ClassesProba, e
 				if next, ok := cur.Children[classVar]; ok {
 					cur = next
 				} else {
-					// Suspicious of this
 					var bestChild string
+					var bestSimilarity float64 = -1
 					for c := range cur.Children {
-						bestChild = c
-						if c > classVar {
-							break
+						similarity := strutil.Similarity(classVar, c, metrics.NewHamming())
+
+						if similarity > bestSimilarity {
+							bestChild = c
+							bestSimilarity = similarity
 						}
 					}
 					cur = cur.Children[bestChild]
